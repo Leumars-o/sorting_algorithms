@@ -1,6 +1,7 @@
 #include "sort.h"
 #include <stdio.h>
 #include <stddef.h>
+
 /**
 * bubble_sort - a function that sorts an array using bubble sort
 * @array: given array to be sorted
@@ -11,9 +12,9 @@
 void bubble_sort(int *array, size_t size)
 {
 	size_t i, j;
-	int tmp;
+	int tmp = 0;
 
-	if !(array && size)
+	if (array == NULL || size == 0)
 		return;
 	for (i = 0; i < size; i++)
 	{
