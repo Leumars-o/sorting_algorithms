@@ -2,14 +2,11 @@
 #include <stdio.h>
 #include <stddef.h>
 /**
-  * bubble_sort - a function that sorts an array of integers in ascending
-  * order using the Bubble sort algorithm
-  *
-  * @array: given array to be sorted
-  * @size: size of array to be sorted
-  *
-  * Return: void
-  */
+* bubble_sort - a function that sorts an array using bubble sort
+* @array: given array to be sorted
+* @size: size of array to be sorted
+* Return: void
+*/
 
 void bubble_sort(int *array, size_t size)
 {
@@ -18,7 +15,6 @@ void bubble_sort(int *array, size_t size)
 
 	if !(array && size)
 		return;
-
 	for (i = 0; i < size; i++)
 	{
 		for (j = 0; j < (size - i - 1); j++)
