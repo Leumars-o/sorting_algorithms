@@ -8,14 +8,15 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t i, j;
-	int least = 0, count = 0;
+	size_t i, j, count = 0;
+	int least = 0;
 
 	if (array == NULL || size == 0)
 		return;
 	for (i = 0; i < size; i++)
 	{
 		least = array[i];
+		count = i;
 		for (j = i + 1; j < size; j++)
 		{
 			if (array[j] < least)
@@ -24,12 +25,12 @@ void selection_sort(int *array, size_t size)
 				count = j;
 			}
 		}
-		if (least != array[i])
+		if (count != i)
 		{
 			array[count] = array[i];
 			array[i] = least;
+			print_array(array, size);
 		}
-		print_array(array, size);
 	}
 }
 
